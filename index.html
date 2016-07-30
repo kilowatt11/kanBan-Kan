@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="kanBan">
+
 <head>
     <meta charset="UTF-8">
     <title>KanBan2</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href=bower_components/font-awesome/css/font-awesome.css ">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Merienda' type='text/css'>
+    <link rel="stylesheet " href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css ">
+    <link rel="stylesheet " href="styles.css ">
 </head>
 <body>
-    {{2+2}}
+    <body ng-controller="AppController as ac ">
+	<nav class="navbar navbar-inverse navbar-fixed-top ">
+		<div class="container ">
+			<a class="navbar-brand ">
+				<span class="logo "><i class="fa fa-trello "></i> Monster Kanban</span>
+			</a>
+			<button ng-show="ac.showRegister " ng-click="ac.register() " type="button " class="btn btn-link navbar-btn navbar-right
+        " title="Register ">Register</button>
+			<button ng-show="ac.showLogin " ng-click="ac.login() " type="button " class="btn btn-link navbar-btn navbar-right
+        " title="Log In "><i class="fa fa-sign-in "></i> Log In</button>
+        <form class="navbar-form navbar-right" role="search">
+				<div class="form-group">
+					<input ng-model="ac.searchTerm" type="text" class="form-control" placeholder="Search">
+				</div>
+				<button ng-click="ac.search()" type="button" class="btn btn-primary" title="Search"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</nav>
     
+    <board-component></board-component>
 
 
-
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_componenets/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="init.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js "></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js "></script>
+    <script src="bower_components/angular/angular.js "></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js "></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.js "></script>
+    <script src="init.js "></script>
+    <script src="es-service.js"></script>
+    <script src="components/board-component/board.js"></script>
 </body>
 </html>
