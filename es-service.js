@@ -16,7 +16,7 @@
           return lists
       }
 
-      this.creatList = function(list){
+      this.createList = function(list){
           list.id = assignId();
           list.tasks = [];
           lists[list.id] = list;
