@@ -1,0 +1,14 @@
+<div class="col-xs-12 col-md-6">
+    
+    <button class="btn btn-default btn-sm" ng-click="$ctrl.addingList = !$ctrl.addingList"><i class="fa fa-plus"></i></button>
+    <div ng-if="$ctrl.addingList">
+        <form ng-submit="$ctrl.addList($ctrl.newList)">
+            <div class="form-group">
+                <label for="formGroupExampleInput">New List</label>
+                <input type="text" class="form-control" ng-model="$ctrl.newList.name" placeholder="List Name">
+            </div>
+            <button class="btn btn-info" type="submit">Add List</button>
+        </form>
+    </div>
+    
+</div>

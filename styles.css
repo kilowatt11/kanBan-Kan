@@ -92,3 +92,6 @@ textarea{
   text-align: left;
   width: 200px;
 }
+.list {
+  display: inline-block
+}

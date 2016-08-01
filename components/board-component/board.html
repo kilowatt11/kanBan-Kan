@@ -1,4 +1,4 @@
-<div>
+<!--<div>
     <h1>THE BOARD <span ng-click="$ctrl.addingList = !$ctrl.addingList">Toggle Add List Form</span></h1>
     <div ng-if="$ctrl.addingList">
         <form ng-submit="$ctrl.addList($ctrl.newList)">
@@ -9,5 +9,19 @@
     <div ng-repeat="list in $ctrl.lists">
         <button ng-click="$ctrl.removeList(list)">X</button>
         <list-component list-obj="list"></list-component>
+    </div>
+</div>-->
+
+<div class="container-fluid storyBoard">
+    <h1>THE BOARD</h1>
+
+    <div class="row">
+        <list-form list-obj="list"></list-form>
+        <task-form></task-form>
+    </div>
+    <div class="row">
+        <div ng-repeat="list in $ctrl.lists">
+            <list-component list-obj="list"></list-component>
+        </div>
     </div>
 </div>
